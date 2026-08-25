@@ -33,6 +33,8 @@ class ContactInfo(BaseModel):
     name: str
     email: str
     phone: str
+    product: str
+    quantity: int
 
 
 agent_bmso = create_agent(
