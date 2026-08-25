@@ -35,11 +35,11 @@ class ContactInfo(BaseModel):
     phone: str
 
 
-agent_tdbm = create_agent(
+agent_bmso = create_agent(
     model="google_genai:gemini-3.1-flash-lite", response_format=ContactInfo
 )
 
-response = agent_tdbm.invoke(
+response = agent_bmso.invoke(
     {"messages": [{"role": "user", "content": recorded_conversation}]}
 )
 
